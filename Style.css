@@ -15,11 +15,10 @@ body {
 #headergrid {
     margin: auto;
     width:100%;
-    height: 7rem;
     background-color: blueviolet;
     display:grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 7.5rem 15rem;
     grid-template-areas: 
 
     "name nav"
@@ -27,8 +26,6 @@ body {
 }
 
 .headergridarea {
-
-    background-size: cover;
 
 }
 
@@ -45,12 +42,12 @@ h1 {
     position: relative;
     left: 1rem;
     background-color: brown;
+    font-size: 3rem;
 }
 
 #nav {
 
     grid-area:nav;
-    height: 7rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -60,14 +57,17 @@ h1 {
     border-width: 20px;
 }
 
+h2 {
+
+    background-color: brown;
+}
+
 
 #hero {
 
     grid-area:hero;
     width: 100%;
-    margin: 0;
     background-color: blue;
-    height: 15rem;
     display: flex;
     flex-direction: row-reverse;
 }
@@ -83,3 +83,86 @@ h3 {
 
 }
 
+/* content */
+
+#contentgrid {
+
+    width:100%;
+    background-color: green;
+    display:grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 15rem 22.5rem 11rem 11rem;
+    grid-template-areas: 
+
+    "aside1 aboutme aboutme"
+    "aside2 mainproject mainproject"
+    "aside2 subproject1 subproject2"
+    "aside2 subproject3 subproject4"
+    ;
+}
+
+.contentgridarea {
+
+    background-size: cover;
+}
+
+#aside1 {
+
+    grid-area:aside1;
+    background-color: crimson;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.h4 {
+
+    padding-right: 1rem;
+    font-size: 3rem;
+
+}
+
+#aside2 {
+
+    grid-area:aside2;
+    background-color: rgb(90, 20, 220);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#aboutme {
+
+    grid-area:aboutme;
+    background-color: coral;
+}
+
+#mainproject {
+
+    grid-area:mainproject;
+    background-color: darkgreen;
+}
+
+#subproject1 {
+
+    grid-area:subproject1;
+    background-color: darkolivegreen;
+
+}
+
+#subproject2 {
+
+    grid-area:subproject2;
+    background-color: deeppink;
+}
+
+
+#subproject3 {
+
+    grid-area:subproject3;
+    background-color: cornflowerblue;
+}
+
+#subproject4 {
+
+    grid-area:subproject4;
+    background-color: darksalmon;
+}

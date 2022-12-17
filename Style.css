@@ -1,0 +1,233 @@
+html {
+    /* changes 1rem to 10px  (1.1rem is 11px) */
+    font-size: 62.5%;
+}
+
+body {
+    background-color: rgb(250, 249, 247);
+    font-family: Garamond, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+}
+
+
+/* Header area */
+#headergrid {
+
+    width:100%;
+    background-color: blueviolet;
+    display:grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 7.5rem 15rem;
+    grid-template-areas: 
+
+    "name nav"
+    "hero hero";
+}
+
+.headergridarea {
+
+}
+
+
+#name {
+    grid-area:name;
+    display: flex;
+    align-items: center;
+}
+
+
+h1 {
+
+    position: relative;
+    left: 1rem;
+    background-color: brown;
+    font-size: 3rem;
+}
+
+#nav {
+
+    grid-area:nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: aqua;
+    border-color: black;
+    border-width: 20px;
+}
+
+h2 {
+
+    background-color: brown;
+}
+
+
+#hero {
+
+    grid-area:hero;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    flex-direction: row-reverse;
+}
+    
+
+h3 {
+    height: min-content;
+    position: relative;
+    right: 2rem;
+    top: 9rem;
+    font-size: 2.2rem;
+    background-color: brown;
+
+}
+
+/* content */
+
+#contentgrid {
+
+    width:100%;
+    background-color: green;
+    display:grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-auto-rows: max-content;
+    grid-template-areas: 
+
+    "aside1 aboutme aboutme"
+    "aside2 mainproject mainproject"
+    "aside2 subproject1 subproject2"
+    "aside2 subproject3 subproject4"
+    ;
+}
+
+.contentgridarea {
+
+    background-size: cover;
+}
+
+#aside1 {
+
+    grid-area:aside1;
+    background-color: crimson;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#aside2 {
+
+    grid-area:aside2;
+    background-color: rgb(90, 20, 220);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+h4 {
+
+    padding-right: 1rem;
+    font-size: 3rem;
+    text-align: right;
+    background-color: aliceblue;
+
+}
+
+#aboutme {
+
+    grid-area:aboutme;
+    background-color: coral;
+}
+
+.aboutme {
+
+        text-align: center;
+        margin: 1rem;
+        background-color: cornsilk;
+
+
+}
+
+
+
+#mainproject {
+
+    grid-area:mainproject;
+    background-color: darkgreen;
+}
+
+#subproject1 {
+
+    grid-area:subproject1;
+    background-color: darkolivegreen;
+
+}
+
+#subproject2 {
+
+    grid-area:subproject2;
+    background-color: deeppink;
+}
+
+
+#subproject3 {
+
+    grid-area:subproject3;
+    background-color: cornflowerblue;
+}
+
+#subproject4 {
+
+    grid-area:subproject4;
+    background-color: darksalmon;
+}
+
+/* footer - contact information */
+
+#footergrid {
+
+    width:100%;
+    background-color: darkred ;
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 7.5rem;
+    grid-template-areas: 
+
+    "aside3 contact"
+    ;
+}
+
+.footergridarea {
+
+    background-size: cover;
+}
+
+#aside3 {
+
+    grid-area: aside3;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+
+h5 {
+
+    font-size: 3rem;
+    margin: auto;
+    text-align: right;
+    
+
+}
+
+
+#contact {
+
+    grid-area: contact;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h6 {
+
+    font-size: 1.5rem;
+}

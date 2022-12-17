@@ -13,7 +13,7 @@ body {
 
 /* Header area */
 #headergrid {
-    margin: auto;
+
     width:100%;
     background-color: blueviolet;
     display:grid;
@@ -114,10 +114,11 @@ h3 {
     flex-direction: row-reverse;
 }
 
-.h4 {
+h4 {
 
     padding-right: 1rem;
     font-size: 3rem;
+    text-align: right;
 
 }
 
@@ -165,4 +166,57 @@ h3 {
 
     grid-area:subproject4;
     background-color: darksalmon;
+}
+
+/* footer - contact information */
+
+#footergrid {
+
+    width:100%;
+    background-color: darkred ;
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 7.5rem;
+    grid-template-areas: 
+
+    "aside3 contact"
+    ;
+}
+
+.footergridarea {
+
+    background-size: cover;
+}
+
+#aside3 {
+
+    grid-area: aside3;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+
+}
+
+h5 {
+
+    font-size: 3rem;
+    margin: auto;
+    text-align: right;
+    
+
+}
+
+
+#contact {
+
+    grid-area: contact;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h6 {
+
+    font-size: 1.5rem;
 }

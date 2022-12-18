@@ -1,32 +1,29 @@
+/* stlye variables used throughout */
 :root{
+
     --offwhite:rgb(250, 249, 247);
     --orange: rgb(229, 157, 102);
     --darkorange:rgb(185, 99, 32);
     --darkgreen: rgb(0, 77, 19);
+    --lightgreen:rgb(219, 255, 184);
     --radius:5px
-
 }
 
 html {
+
     /* changes 1rem to 10px  (1.1rem is 11px) */
     font-size: 62.5%;
 }
 
 body {
+
     background-color: var(--offwhite);
     font-family: Garamond, 'Times New Roman', Times, serif;
     font-size: 1.4rem;
 }
 
-img{
 
-width: 100%;
-height:100%;
-
-}
-
-
-/* Header area */
+/* Header area grid*/
 #headergrid {
     
     width:100%;
@@ -40,8 +37,9 @@ height:100%;
     "photoarea hero";
 }
 
-
+/* Header area - Candidate name */
 #name {
+
     grid-area:name;
     display: flex;
     align-items: center;
@@ -49,7 +47,7 @@ height:100%;
 }
 
 
-h1 {
+h1 {/* Header area - Candidate name styles */
 
     padding: 0.5rem;
     position: relative;
@@ -60,7 +58,7 @@ h1 {
     color: var(--darkgreen);
 }
 
-#nav {
+#nav {/* Header area - nav */
 
     grid-area:nav;
     display: flex;
@@ -70,7 +68,8 @@ h1 {
     background-color: var(--darkorange);
 }
 
-a{
+.navlink{/* Header area - nav  styles*/
+
     padding: 0.5rem;
     background-color: var(--offwhite);
     border-radius: var(--radius);
@@ -81,27 +80,29 @@ a{
 }
 
 
-#photoarea
-{ 
+#photoarea { /* Header area - candidate photo/avatar */
+
     grid-area: photoarea;
     background-color: var(--orange);
 
 }
 
-#photo {
+#photo {/* Header area - candidate photo/avatar style */
+
     margin-top: 0.7rem;
     margin-left: 1rem;
     width: auto;
     height: 90%;
     border-radius: var(--radius);
+    border: var(--offwhite) solid 0.2rem;
 }
 
 
-#hero {
+#hero { /* Header area - subheading */
 
     grid-area:hero;
     width: 100%;
-    background-color: blue;
+    background-color: var(--orange);
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-end;
@@ -109,18 +110,23 @@ a{
 }
     
 
-h2 {
+h2 {  /* Header area - subheading styles */
     margin: 1rem;
     font-size: 2.2rem;
-    background-color: brown;
+    background-color:var(--offwhite);
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    color: var(--darkgreen);
 
 }
 
+
+
 /* content */
 
-#contentgrid {
+#contentgrid {/* content - grid - container for candidate projects and aside */
 
-    background-color: green;
+    background-color:var(--offwhite);
     display:grid;
     grid-template-columns: 20% 40% 40%;
     grid-auto-rows: min-content;
@@ -133,86 +139,95 @@ h2 {
     ;
 }
 
-#aside1 {
+img{ /* content - project image constraints */
+
+    width: 100%;
+    height:100%;  
+}
+
+
+#aside1 {/* content - aside 'about me' - heading grid area */
 
     grid-area:aside1;
-    background-color: crimson;
+    background-color: var(--darkgreen);
+    color: var(--darkgreen);
     display: flex;
     flex-direction: row-reverse;
 }
 
-#aside2 {
+#aside2 {/* content - aside 'work' - heading grid area */
 
     grid-area:aside2;
-    background-color: rgb(90, 20, 220);
+    background-color: var(--darkgreen);
     display: flex;
     flex-direction: row-reverse;
 }
 
-h3 {
-
+h3 {/* content - aside - heading styles */
+    margin: auto;
+    padding: 0.5rem;
     padding-right: 1rem;
     font-size: 3rem;
     text-align: right;
-    background-color: aliceblue;
-
+    background-color: var(--offwhite);
+    border-radius: var(--radius);
 }
 
-#aboutme {
+
+#aboutme { /* content - about me - grid area */
 
     grid-area:aboutme;
-    background-color: coral;
+    background-color: var(--lightgreen);
 }
 
-.aboutme {
+.aboutme { /* content - about me - grid content */
 
         text-align: center;
         margin: 1rem;
-        background-color: cornsilk;
 }
 
 
-.projecttitle {
+.projecttitle { /* content - project titles in content grid */
 
     position: relative;
     top: -4rem;
     padding: 0.5rem;
     background-color: black;
-    color: aliceblue;  
+    color: var(--offwhite);  
     font-size: 2rem;
 
 
 }
 
-#mainproject {
-
+#mainproject {/* content - main project image */
     grid-area:mainproject;
-
 }
 
-#subproject1 {
+#subproject1 {/* content - subproject1 image */
     grid-area:subproject1;  
 }
 
-#subproject2 {
+#subproject2 {/* content - subproject2 image */
     grid-area:subproject2;
 }
 
 
-#subproject3 {   
+#subproject3 {  /* content - subproject3 image */
     grid-area:subproject3;
 }
 
-#subproject4 {
+#subproject4 {/* content - subproject4 image */
     grid-area:subproject4;
 }
 
+
+
 /* footer - contact information */
 
-#footergrid {
+#footergrid {/* footer - grid area */
 
     width:100%;
-    background-color: darkred ;
+    background-color: var(--darkorange) ;
     display:grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 7.5rem;
@@ -222,12 +237,7 @@ h3 {
     ;
 }
 
-.footergridarea {
-
-    background-size: cover;
-}
-
-#aside3 {
+#aside3 {/* footer - contact me heading area */
 
     grid-area: aside3;
     display: flex;
@@ -236,7 +246,7 @@ h3 {
 
 }
 
-#contact {
+#contact { /* footer - contact information grid area */
 
     grid-area: contact;
     display: flex;
@@ -245,7 +255,11 @@ h3 {
     align-items: center;
 }
 
-h4 {
-
+h4 {/* footer - contact information styles */
     font-size: 1.5rem;
+    color: var(--darkgreen);
+    background-color: var(--offwhite);
+    padding: 0.5rem;
+    border-radius: var(--radius);
+
 }

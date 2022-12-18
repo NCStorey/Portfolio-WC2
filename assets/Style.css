@@ -21,7 +21,7 @@ body {
     grid-template-areas: 
 
     "name nav"
-    "photo hero";
+    "photoarea hero";
 }
 
 .headergridarea {
@@ -52,18 +52,21 @@ h1 {
     justify-content: space-around;
     align-items: center;
     background-color: aqua;
-    border-color: black;
-    border-width: 20px;
 }
 
-h2 {
 
-    background-color: brown;
+#photoarea
+{ 
+    grid-area: photoarea;
+    background-color: darkcyan;
+
 }
 
-#photo
-{ grid-area: photo;
-background-color: darkcyan;}
+#photo {
+
+    margin: 1rem;
+    width: 11rem;
+}
 
 
 #hero {
@@ -78,7 +81,7 @@ background-color: darkcyan;}
 }
     
 
-h3 {
+h2 {
     margin: 1rem;
     font-size: 2.2rem;
     background-color: brown;
@@ -93,7 +96,7 @@ h3 {
     background-color: green;
     display:grid;
     grid-template-columns: 20% 40% 40%;
-    grid-auto-rows: max-content;
+    grid-auto-rows: min-content;
     grid-template-areas: 
 
     "aside1 aboutme aboutme"
@@ -124,7 +127,7 @@ h3 {
     flex-direction: row-reverse;
 }
 
-h4 {
+h3 {
 
     padding-right: 1rem;
     font-size: 3rem;
@@ -148,38 +151,58 @@ h4 {
 
 }
 
+.project {
 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 1rem;
+    
+
+}
+
+.projecttitle {
+
+    padding: 0.5rem;
+    background-color: black;
+    color: aliceblue;  
+    font-size: 2rem;
+
+
+}
 
 #mainproject {
 
     grid-area:mainproject;
-    background-color: darkgreen;
+    height: 20rem;
+    background-image: url(/assets/images/main-project.png);
 }
 
 #subproject1 {
 
+    height: 10rem;
     grid-area:subproject1;
-    background-color: darkolivegreen;
+    background-image: url(/assets/images/subproject1.png);
 
 }
 
 #subproject2 {
 
     grid-area:subproject2;
-    background-color: deeppink;
+    background-image: url(/assets/images/subproject2.jpg)
 }
 
 
 #subproject3 {
-
+    height: 10rem;
     grid-area:subproject3;
-    background-color: cornflowerblue;
+    background-image: url(/assets/images/subproject3.png)
 }
 
 #subproject4 {
 
     grid-area:subproject4;
-    background-color: darksalmon;
+    background-image: url(/assets/images/subproject6.jpg);
 }
 
 /* footer - contact information */
@@ -211,16 +234,6 @@ h4 {
 
 }
 
-h5 {
-
-    font-size: 3rem;
-    margin: auto;
-    text-align: right;
-    
-
-}
-
-
 #contact {
 
     grid-area: contact;
@@ -230,7 +243,7 @@ h5 {
     align-items: center;
 }
 
-h6 {
+h4 {
 
     font-size: 1.5rem;
 }

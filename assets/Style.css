@@ -1,10 +1,19 @@
+:root{
+    --offwhite:rgb(250, 249, 247);
+    --orange: rgb(229, 157, 102);
+    --darkorange:rgb(185, 99, 32);
+    --darkgreen: rgb(0, 77, 19);
+    --radius:5px
+
+}
+
 html {
     /* changes 1rem to 10px  (1.1rem is 11px) */
     font-size: 62.5%;
 }
 
 body {
-    background-color: rgb(250, 249, 247);
+    background-color: var(--offwhite);
     font-family: Garamond, 'Times New Roman', Times, serif;
     font-size: 1.4rem;
 }
@@ -19,9 +28,9 @@ height:100%;
 
 /* Header area */
 #headergrid {
-
+    
     width:100%;
-    background-color: blueviolet;
+    background-color: var(--orange);
     display:grid;
     grid-template-columns: 60% 40%;
     grid-template-rows: 7.5rem 15rem;
@@ -31,24 +40,24 @@ height:100%;
     "photoarea hero";
 }
 
-.headergridarea {
-
-}
-
 
 #name {
     grid-area:name;
     display: flex;
     align-items: center;
+    background-color: var(--darkorange);
 }
 
 
 h1 {
 
+    padding: 0.5rem;
     position: relative;
+    background-color: var(--offwhite);
+    border-radius: var(--radius);
     left: 1rem;
-    background-color: brown;
     font-size: 3rem;
+    color: var(--darkgreen);
 }
 
 #nav {
@@ -58,21 +67,33 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: aqua;
+    background-color: var(--darkorange);
+}
+
+a{
+    padding: 0.5rem;
+    background-color: var(--offwhite);
+    border-radius: var(--radius);
+    color: var(--darkgreen);
+    text-decoration-line: none;
+    font-weight: bold;
+
 }
 
 
 #photoarea
 { 
     grid-area: photoarea;
-    background-color: darkcyan;
+    background-color: var(--orange);
 
 }
 
 #photo {
-
-    margin: 1rem;
-    width: 11rem;
+    margin-top: 0.7rem;
+    margin-left: 1rem;
+    width: auto;
+    height: 90%;
+    border-radius: var(--radius);
 }
 
 

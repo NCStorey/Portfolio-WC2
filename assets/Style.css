@@ -9,6 +9,13 @@ body {
     font-size: 1.4rem;
 }
 
+img{
+
+width: 100%;
+height:100%;
+
+}
+
 
 /* Header area */
 #headergrid {
@@ -92,7 +99,6 @@ h2 {
 
 #contentgrid {
 
-    width:100%;
     background-color: green;
     display:grid;
     grid-template-columns: 20% 40% 40%;
@@ -104,11 +110,6 @@ h2 {
     "aside2 subproject1 subproject2"
     "aside2 subproject3 subproject4"
     ;
-}
-
-.contentgridarea {
-
-    background-size: cover;
 }
 
 #aside1 {
@@ -147,22 +148,13 @@ h3 {
         text-align: center;
         margin: 1rem;
         background-color: cornsilk;
-
-
 }
 
-.project {
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 1rem;
-    
-
-}
 
 .projecttitle {
 
+    position: relative;
+    top: -4rem;
     padding: 0.5rem;
     background-color: black;
     color: aliceblue;  
@@ -174,35 +166,24 @@ h3 {
 #mainproject {
 
     grid-area:mainproject;
-    height: 20rem;
-    background-image: url(/assets/images/main-project.png);
+
 }
 
 #subproject1 {
-
-    height: 10rem;
-    grid-area:subproject1;
-    background-image: url(/assets/images/subproject1.png);
-
+    grid-area:subproject1;  
 }
 
 #subproject2 {
-
     grid-area:subproject2;
-    background-image: url(/assets/images/subproject2.jpg)
 }
 
 
-#subproject3 {
-    height: 10rem;
+#subproject3 {   
     grid-area:subproject3;
-    background-image: url(/assets/images/subproject3.png)
 }
 
 #subproject4 {
-
     grid-area:subproject4;
-    background-image: url(/assets/images/subproject6.jpg);
 }
 
 /* footer - contact information */

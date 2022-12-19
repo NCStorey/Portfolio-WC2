@@ -191,7 +191,7 @@ h2 {  /* Header area - subheading styles */
 
 }
 
-@media only screen and (max-width: 768px) {/* center subhead on hero bar for tablet and phone */
+@media only screen and (max-width: 768px) {/*reduce font size for tablet and phone */
 
 h2{
     
@@ -216,7 +216,7 @@ h2{
     ;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {/* content - change of grid to flexbox for tablets and phones */
 
     #contentgrid {
         display: flex;

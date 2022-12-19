@@ -225,7 +225,7 @@ h2{
 
 }}
 
-@media only screen and (max-width: 768px) { /* setting order of items in content using flexbox */
+@media only screen and (max-width: 768px) { /* setting order of items in content using flexbox and hieight of flex boxes */
 
     #aside1 {order: 0;}
     #aside2 {order: 2;}
@@ -236,6 +236,10 @@ h2{
     #subproject3 {order: 6;}
     #subproject4 {order: 7;}
 
+    #subproject1 img {height:10rem; object-fit:cover}
+    #subproject2 img {height:10rem; object-fit:cover}
+    #subproject3 img {height:10rem; object-fit:cover}
+    #subproject4 img {height:10rem; object-fit:cover}
 }
 
 img{ /* content - project image constraints */
@@ -274,6 +278,14 @@ h3 {/* content - aside - heading styles */
     border-radius: var(--radius);
 }
 
+@media only screen and (max-width: 768px) {/* content - aside - heading styles - smaller text for phone and table */
+
+    h3 
+        {padding: 0.1rem; 
+        font-size: 2.5rem;       
+        text-align: center;} 
+}
+
 
 #aboutme { /* content - about me - grid area */
 
@@ -296,8 +308,6 @@ h3 {/* content - aside - heading styles */
     background-color: black;
     color: var(--offwhite);  
     font-size: 2rem;
-
-
 }
 
 #mainproject {/* content - main project image */
@@ -320,8 +330,6 @@ h3 {/* content - aside - heading styles */
 #subproject4 {/* content - subproject4 image */
     grid-area:subproject4;
 }
-
-
 
 /* footer - contact information */
 
@@ -362,5 +370,14 @@ h4 {/* footer - contact information styles */
     background-color: var(--offwhite);
     padding: 0.5rem;
     border-radius: var(--radius);
+
+}
+
+@media only screen and (max-width: 768px) {/* footer - contact information styles for tablet and phone*/
+
+    h4{
+    font-size: 1.5rem;
+    padding:0.1rem;
+    text-align: center;}
 
 }
